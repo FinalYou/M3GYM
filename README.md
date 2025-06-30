@@ -1,14 +1,15 @@
 # Nerfies
 
-This is the repository that contains source code for the [Nerfies website](https://nerfies.github.io).
+This is the repository that contains source code for the [M3GYM website](https://finalyou.github.io/M3GYM/).
 
-If you find Nerfies useful for your work please cite:
+If you find M3GYM useful for your work please cite:
 ```
-@article{park2021nerfies
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+@inproceedings{xu2025m3gym,
+  title={M3GYM: A Large-Scale Multimodal Multi-view Multi-person Pose Dataset for Fitness Activity Understanding in Real-world Settings},
+  author={Xu, Qingzheng and Cao, Ru and Shen, Xin and Du, Heming and Wang, Sen and Yu, Xin},
+  booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference},
+  pages={12289--12300},
+  year={2025}
 }
 ```
 
