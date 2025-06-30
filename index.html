@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="M3GYM is a large-scale multimodal, multi-view, multi-person human pose dataset for fitness activity understanding in real-world gym environments.">
+  <meta name="keywords" content="M3GYM, human pose estimation, fitness dataset, multi-view, multi-person, multimodal, 3D human pose, gym, computer vision">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>M3GYM: A Large-Scale Multimodal Multi-view Multi-person Pose Dataset for Fitness Activity Understanding in Real-world Settings</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/icon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">M3GYM: A Large-Scale Multimodal Multi-view Multi-person Pose Dataset for Fitness Activity Understanding in Real-world Settings</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Qingzheng Xu<sup>1,3</sup>,</span>
+            <span class="author-block">Ru Cao<sup>2</sup>,</span>
+            <span class="author-block">Xin Shen<sup>1</sup>,</span>
+            <span class="author-block">Heming Du<sup>1,3</sup>,</span>
+            <span class="author-block">Sen Wang<sup>1</sup>,</span>
+            <span class="author-block"><a href="https://sites.google.com/view/xinyus-homepage/Home">Xin Yu</a><sup>1,3</sup></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>The University of Queensland,</span>
+            <span class="author-block"><sup>2</sup>City University of Macau,</span>
+            <span class="author-block"><sup>3</sup>Follow Me AI Pty LTD</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://openaccess.thecvf.com/content/CVPR2025/papers/Xu_M3GYM_A_Large-Scale_Multimodal_Multi-view_Multi-person_Pose_Dataset_for_Fitness_CVPR_2025_paper.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Github Link. -->
+              <span class="link-block">
+                <a href="https://finalyou.github.io/M3GYM/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Github</span>
+                  </a>
+              </span>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img id="title-image" src="./static/images/title.png" alt="Illustration of M3GYM" style="max-width: 100%; height: auto;">
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Illustration of M3GYM.</span>
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+          Human pose estimation is a critical task in computer vision for applications in sports analysis, healthcare monitoring, and human-computer interaction. 
+          However, existing human pose datasets are collected either from custom-configured laboratories with complex devices or they only include data on single individuals, and both types typically capture daily activities. 
+          <p></p>
+          In this paper, we introduce the M3GYM dataset, a large-scale multimodal, multi-view, and multi-person pose dataset collected from a real gym to address the limitations of existing datasets.
+          Specifically, we collect videos for 82 sessions from the gym, each session lasting between 40 to 60 minutes. These videos are gathered by 8 cameras, including over 50 subjects and 47 million frames. 
+          These sessions include 51 Normal fitness exercise sessions as well as 17 Pilates and 14 Yoga sessions. The exercises cover a wide range of poses and typical fitness activities, particularly in Yoga and Pilates, featuring poses with stretches, bends, and twists, e.g., humble warrior, fire hydrants and knee hover side twists.
+          Each session involves multiple subjects, leading to significant self-occlusion and mutual occlusion in single views.
+          Moreover, the gym has two symmetric floor mirrors, a feature not seen in previous datasets, and seven lighting conditions. 
+          We provide frame-level multimodal annotations, including 2D&3D keypoints, subject IDs, and meshes. Additionally, M3GYM uniquely offers labels for over 500 actions along with corresponding assessments from sports experts.
+          <p></p>We benchmark a variety of state-of-the-art methods for several tasks, i.e., 2D human pose estimation, single-view and multi-view 3D human pose estimation, and human mesh recovery. 
+          To simulate real-world applications, we also conduct cross-domain experiments across Normal, Yoga, and Pilates sessions. 
+          The results show that M3GYM significantly improves model generalization in complex real-world settings.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <video controls playsinline loop muted autoplay style="width: 100%; height: auto;">
+            <source src="./static/videos/m3gym.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="section">
+      <div class="container content">
+        <h2 class="title is-3">Dataset Comparison</h2>
+        <p>
+          M3GYM offers a unique multi-view human pose dataset, focusing on diverse fitness activities in multi-person scenes with complex occlusions in real-world settings.
+        </p>
+        <img id="related-image" src="./static/images/related.png" alt="Comparison of multi-view real-world human pose datasets" style="max-width: 100%; height: auto;">
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="title is-3">Semi-automated Pipeline</h2>
+      <div class="columns is-centered">
+        <div class="column content">
+          <p>
+            To ensure high-quality annotations, our semi-automated pipeline integrates
+            <strong>2D annotation voting</strong> and <strong>3D manual adjustment</strong>,
+            followed by <strong>manual verification</strong> to provide accurate ground truth data.
+          </p>
+          <img id="pipeline-image" src="./static/images/pipe.png" alt="Illustration of M3GYM Semi-automated Pipeline" style="max-width: 100%; height: auto;">
+
+          <p style="margin-top: 1em;">
+            The 3D annotation interface is built using Blender to facilitate intuitive 3D keypoint adjustment.
+          </p>
+          <img id="blender-image" src="./static/images/blender.png" alt="Annotation Tool Interface in Blender" style="max-width: 100%; height: auto;">
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">The M3GYM Dataset</h2>
+
+          <h3 class="title is-4">Samples Across Settings and Sessions</h3>
+          <div class="content has-text-justified">
+            <p>
+              The M3GYM dataset captures diverse challenges including complex occlusions, realistic gym environments.
+            </p>
+          </div>
+            <div class="content has-text-centered">
+              <div class="columns is-centered">
+                <div class="column is-two-thirds"> <img src="./static/images/set.png" alt="Illustration of challenges in M3GYM" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+                </div>
+              </div>
+              <p class="is-size-6" style="margin-bottom: 2em;">
+                Samples showing (a) varied lighting, (b) self-occlusions, (c) mutual occlusions, (d) mirrored gym setups, and (e) unique overhead views.
+              </p>
+
+              <img src="./static/images/sample.png" alt="Samples across three session types" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+              <p class="is-size-6">
+                Samples across three session types: Normal, Pilates, and Yoga.
+              </p>
+            </div>
+          <br/>
+
+          <h3 class="title is-4">Dataset Statistics</h3>
+          <div class="content has-text-justified">
+            <p>
+              M3GYM is curated with a focus on diversity and difficulty. The statistics below highlight the session densities, lighting diversity, hard-case frequencies, and most common action types.
+            </p>
+          </div>
+          <div class="content has-text-centered">
+            <img src="./static/images/stat.png" alt="Dataset statistics of M3GYM" style="max-width: 90%; height: auto;">
+            <p class="is-size-6">
+              (a) Dense vs. sparse session distribution. (b) Lighting diversity (excluding well-lit). (c) Frequency of hard-case frames. (d) Top 50 action types.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+</section>
+
+<!-- Consent and Dataset Access -->
+<section class="section" id="Access">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Consent and Dataset Access</h2>
+
+    <div class="content has-text-justified">
+      <p>
+        All participants involved in the M3GYM data collection process were fully informed of the study's purpose and procedures. Before any recording, each individual reviewed detailed information and voluntarily signed a consent form.
+      </p>
+      <p>
+        As the dataset contains both body and facial information, we take privacy seriously. No personally identifiable details (e.g., names, ages, occupations) are collected or released. Facial features are anonymized to prevent identification.
+      </p>
+      <p>
+        The dataset is released for <strong>non-commercial academic research only</strong>. To access it, please complete the <strong>Data Access Protocol Form</strong>. A download link will be provided via email upon approval.
+      </p>
+      <p>
+        <a class="button is-link is-light" href="https://forms.gle/stJZgHaji7KNa5t7A" target="_blank">
+          Fill Out Access Request Form
+        </a>
+      </p>
+    </div>
+  </div>
+</section>
+<!--/ Consent and Dataset Access -->
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{xu2025m3gym,
+  title     = {M3GYM: A Large-Scale Multimodal Multi-view Multi-person Pose Dataset for Fitness Activity Understanding in Real-world Settings},
+  author    = {Xu, Qingzheng and Cao, Ru and Shen, Xin and Du, Heming and Wang, Sen and Yu, Xin},
+  booktitle = {Proceedings of the Computer Vision and Pattern Recognition Conference},
+  pages     = {12289--12300},
+  year      = {2025}
+}</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/m3gym.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://finalyou.github.io/M3GYM/" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
